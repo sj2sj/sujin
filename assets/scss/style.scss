@@ -64,6 +64,14 @@ $high-color: #4A206A;
 	border-radius: 15px;
 }
 
+@mixin bgGradient($fromColor, $toColor, $direction) {
+	background: $fromColor; 
+	background: -webkit-linear-gradient(to $direction, $fromColor 0%, $toColor 100%);
+	background: -o-linear-gradient(to $direction, $fromColor 0%, $toColor 100%);
+	background: -ms-linear-gradient(to $direction, $fromColor 0%, $toColor 100%);
+	background: linear-gradient(to $direction, $fromColor 0%, $toColor 100%);
+}
+
 @mixin highlight($color) {
 	&.highlight {
 		position: relative;
@@ -84,6 +92,7 @@ $high-color: #4A206A;
 	}
 }
 
+.fp-responsive #fullpage .section {padding-bottom: 40px;}
 
 .container {
 	@include full-container;
@@ -199,6 +208,7 @@ $high-color: #4A206A;
 				margin: -35px 0 30px 0;
 				font-size: 20px;
 				letter-spacing: 0.1em;
+				.res_br {display: none;}
 			}
 			.left_area {
 				width: 18%;
@@ -222,7 +232,7 @@ $high-color: #4A206A;
 				overflow: hidden;
 				& > div {@include right-wrap;}
 				.skill_wrap {
-					margin-bottom: 2%;
+					margin-bottom: 20px;
 					width: 100%; height: 60%;
 					float: left;
 					ul {
@@ -303,51 +313,60 @@ $high-color: #4A206A;
 			ul {
 				height: 80%;
 				li {
-					transition: all 0.5s;
 					&:before {
 						position: absolute;
 						content: '';
 						top: 50%; left: 50%;
 						transform: translateX(-50%);
 						width: 30%; height: 5px;
-						background: #4A206A; 
-						background: -webkit-linear-gradient(to right, #4A206A 0%, #f68084 100%);
-						background: -o-linear-gradient(to right, #4A206A 0%, #f68084 100%);
-						background: -ms-linear-gradient(to right, #4A206A 0%, #f68084 100%);
-						background: linear-gradient(to right, #4A206A 0%, #f68084 100%);
+						@include bgGradient(#f68084, #4A206A, right);
 					}
 					position: relative;
 					float: left;
-					width: 32.6%; height: 100%;
+					overflow: hidden;
+					width: calc(50% - 10px); height: 50%; min-height: 350px;
 					background: $con-bg-color;
 					padding: 10px 20px;
 					border-radius: 15px;
 					box-sizing: border-box;
-					&:nth-child(2) {margin: 0 1%;}
-					&:hover {
-						box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); 
+					margin: 5px;
+					transition: all 0.5s;
+					&:hover .info {
+						opacity: 1;
 					}
+					&:hover img {opacity: 0.5;}
 					img {
 						position: absolute;
 						&.pc {
+							max-width: 450px;
 							width: 90%;
-							top: 40px; left: 50%;
-							transform: translateX(-50%);
+							top: 50%; left: 50%;
+							transform: translate(-50%, -50%);
 						}
-						&.tablet {width: 30%; top: 118px; left: 45%;}
-						&.mobile {width: 22%; top: 120px; left: 70%;}
+						&.tablet {max-width: 150px; width: 30%; top: 118px; left: 45%;}
+						&.mobile {max-width: 110px; width: 22%; top: 120px; left: 70%;}
 					}
 					.info {
-						position: relative;
-						top: 55%; left: 5%;
+						position: absolute;
+						left: 0; top: 0;
+						opacity: 0;
+						width: 100%; height: 100%;
+						border-radius: 15px;
+						background: rgba(255, 255, 255, 0.5);
+						text-align: center;
+						transition: all 0.5s ease;
 						strong {
 							display: block;
-							padding-bottom: 10px;
-							font-size: 22px;
+							padding: 50px 0 10px 0;
+							font-size: 27px;
 							font-weight: 600;
 						}
+						.parent-p {
+							display: inline-block;
+							text-align: left;
+						}
 						p {
-							padding: 5px 0;
+							padding: 5px 0 3px 0;
 							em {
 								display: inline-block;
 								background: $high-color;
@@ -402,22 +421,61 @@ $high-color: #4A206A;
 		background: url(#{$img-url}/footer_bg.jpg) no-repeat center center;
 		background-size: cover;
 		.container {
+			overflow: hidden;
 			height: 100%;
 			h3 {
-				text-align: center;
 				margin: 20px 0;
+				text-align: center;
+				font-weight: 300;
+			}
+			h4 {
+				position: relative;
+				padding-bottom: 20px; margin-bottom: 30px;
+				font-size: 30px;
+				&:before {
+					position: absolute;
+					content: '';
+					bottom: 0; left: 0;
+					width: 40%; height: 5px;
+					@include bgGradient(#f68084, #4A206A, right);
+				}
+			}
+			div {padding: 70px;}
+			.review_area {
+				float: left;
+				width: 49%;
+				margin-right: 2%;
+				box-sizing: border-box;
+				p {
+					font-size: 20px; letter-spacing: 0.01em; font-weight: 300;
+				}
 			}
 			.contact_area {
-				text-align: center;
+				float: right;
+				width: 49%;
+				box-sizing: border-box;
 				ul {
-					margin-bottom: 20px;
 					li {
-						font-size: 25px;
-						letter-spacing: 0.01em;
-						font-weight: 300;
+						margin-bottom: 20px;
+						img {
+							width: 32px; height: 32px;
+							vertical-align: middle;
+						}
+						span {
+							vertical-align: middle; 
+							font-size: 20px; letter-spacing: 0.01em; font-weight: 300;
+							padding-left: 10px;
+						}
 					}
 				}
-				.copyright {color: #eee; letter-spacing: -0.03em; font-weight: 300;}
+			}
+			.copyright {
+				position: absolute;
+				left: 50%; bottom: 3px;
+				transform: translateX(-50%);
+				color: #eee; letter-spacing: -0.03em; font-weight: 300;
+				padding: 0 10px;
+				background: rgba(0, 0, 0, 0.2);
 			}
 		}
 	}
@@ -432,7 +490,7 @@ $high-color: #4A206A;
 // 모달
 #modal {
 	display: none;
-	position: absolute;
+	position: fixed;
 	width: 100%; height: 100%;
 	z-index: 20;
 
@@ -500,7 +558,7 @@ $high-color: #4A206A;
 		.modal_info {
 			float: left;
 			width: 40%;
-			padding: 50px 20px 50px 40px;
+			padding: 50px 20px 0 40px;
 			box-sizing: border-box;
 			font-size: 18px;
 			strong {
@@ -512,9 +570,10 @@ $high-color: #4A206A;
 			}
 			p {
 				padding-bottom: 3px;
-				i {
-					display: inline-block;
+				&.refer {
 					margin: 20px 0;
+					font-size: 16px;
+					color: #777;
 				}
 				em {font-weight: 500;}
 				span {color: #555;}

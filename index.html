@@ -9,6 +9,9 @@
     <meta property="og:url" content="https://github.com/sj2sj/sujin" />
 	<title>이수진 포트폴리오</title>
 
+	<!-- 파비콘 -->
+    <link rel="shortcut icon" href="assets/favicon/favicon2.ico">
+
 	<!-- CSS -->
 	<link rel="stylesheet" href="assets/css/reset.css">
 	<link rel="stylesheet" href="assets/scss/css/style.css">
@@ -35,8 +38,8 @@
 
 			<div class="modal_info">
 				<strong class="highlight"><span>관세청</span></strong>
-				<p class="refer"><i>현재 운영 중인 사이트의 클론 코딩 페이지 입니다.  
-						저는 사이트의 디자인만을 참고하여 html, css, js를 작성하였습니다. </i></p>
+				<p class="refer">* 현재 운영 중인 사이트의 클론 코딩 페이지 입니다.  
+						저는 사이트의 디자인만을 참고하여 html, css, js를 작성하였습니다. </p>
 				<p><em>유형 : </em> <span>반응형 웹</span></p>
 				<p>
 					<em>구현 : </em> <span>퍼블리싱 100%</span>
@@ -115,7 +118,7 @@
 		<section id="about" class="section sec2 about fp-auto-height-responsive" data-anchor="page2">
 			<div class="container clearfix">
 				<h3 class="title_text">What about me!</h3>
-				<strong class="words">만들고, 해결하며 즐거움을 찾는 퍼블리셔 이수진 입니다.</strong>
+				<strong class="words">만들고, 해결하며 즐거움을 찾는 <br class="res_br">퍼블리셔 이수진 입니다.</strong>
 				<div class="left_area">
 					<div class="profile_wrap">
 						<div class="photo"> 
@@ -126,7 +129,7 @@
 				<div class="right_area">
 					<div class="skill_wrap">
 						<h4>기술</h4>
-						<ul>
+						<ul class="parent-ul">
 							<li>
 								<strong class="highlight"><span>Development</span></strong>
 								<p> 
@@ -138,7 +141,7 @@
 									<li>웹 표준과 웹 접근성을 준수하여 마크업합니다.</li>
 									<li>크로스 브라우징 작업을 합니다.</li>
 									<li>미디어쿼리를 이용해 반응형 웹 페이지를 만듭니다.</li>
-									<li>Scss를 사용하여 재사용성을 높이고 유지보수가 쉽도록 합니다.</li>
+									<li>Scss를 사용하여 css를 구조화하고 재사용성을 높입니다. </li>
 									<li>자바스크립트 플러그인을 활용할 수 있습니다.</li>
 								</ul>
 							</li>
@@ -152,7 +155,7 @@
 					</div>
 					<div class="work_wrap">
 						<h4>경력</h4>
-						<ul>
+						<ul class="parent-ul">
 							<li class="bold">
 								<em>2018.12~2019.12</em>
 								<strong>(주)소프트잼 사원 (R&D팀)</strong>
@@ -165,7 +168,7 @@
 					</div>
 					<div class="certificate_wrap">
 						<h4>자격증</h4>
-						<ul>
+						<ul class="parent-ul">
 							<li>정보처리산업기사</li>
 							<li>컴퓨터활용능력 2급</li>
 						</ul>
@@ -187,15 +190,17 @@
 						<img src="assets/img/portfolio/phone_customs.png" class="mobile" alt="관세청 모바일 기기 버전">
 						<div class="info">
 							<strong>관세청</strong>
-							<p><em>유형</em>반응형 웹</p>
-							<p><em>구현</em>퍼블리싱 100%</p>
-							<p><em>작업 기간</em>2020. 3~</p>
-						</div>
-						<div class="more-btn">
-							<div class="btn-gradient">
-								<button type="button" id="modal_open_btn"> more detail
-									<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-								</button>
+							<div class="parent-p">
+								<p><em>유형</em>반응형 웹</p>
+								<p><em>구현</em>퍼블리싱 100%</p>
+								<p><em>작업 기간</em>2020. 3~</p>
+							</div>
+							<div class="more-btn">
+								<div class="btn-gradient">
+									<button type="button" id="modal_open_btn"> more detail
+										<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+									</button>
+								</div>
 							</div>
 						</div>
 					</li>
@@ -205,15 +210,17 @@
 						<img src="assets/img/portfolio/phone_coffeebean.png" class="mobile" alt="커피빈 모바일 기기 버전">
 						<div class="info">
 							<strong>커피빈</strong>
-							<p><em>유형</em>반응형 웹</p>
-							<p><em>구현</em>퍼블리싱 100%</p>
-							<p><em>작업 기간</em>2020. 3~</p>
-						</div>
-						<div class="more-btn">
-							<div class="btn-gradient">
-								<button type="button"> more detail
-									<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-								</button>
+							<div class="parent-p">
+								<p><em>유형</em>반응형 웹</p>
+								<p><em>구현</em>퍼블리싱 100%</p>
+								<p><em>작업 기간</em>2020. 3~</p>
+							</div>
+							<div class="more-btn">
+								<div class="btn-gradient">
+									<button type="button"> more detail
+										<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+									</button>
+								</div>
 							</div>
 						</div>
 					</li>
@@ -223,15 +230,37 @@
 						<img src="assets/img/portfolio/phone_megabox.png" class="mobile" alt="megabox 모바일 기기 버전">
 						<div class="info">
 							<strong>메가박스</strong>
-							<p><em>유형</em>반응형 웹</p>
-							<p><em>구현</em>퍼블리싱 100%</p>
-							<p><em>작업 기간</em>2020. 2~</p>
+							<div class="parent-p">
+								<p><em>유형</em>반응형 웹</p>
+								<p><em>구현</em>퍼블리싱 100%</p>
+								<p><em>작업 기간</em>2020. 2~</p>
+							</div>
+							<div class="more-btn">
+								<div class="btn-gradient">
+									<button type="button"> more detail
+										<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+									</button>
+								</div>
+							</div>
 						</div>
-						<div class="more-btn">
-							<div class="btn-gradient">
-								<button type="button"> more detail
-									<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-								</button>
+					</li>
+					<li>
+						<img src="assets/img/portfolio/notebook_megabox.png" class="pc" alt="megabox PC버전">
+						<img src="assets/img/portfolio/tablet_megabox.png" class="tablet" alt="megabox 타블렛 버전">
+						<img src="assets/img/portfolio/phone_megabox.png" class="mobile" alt="megabox 모바일 기기 버전">
+						<div class="info">
+							<strong>메가박스</strong>
+							<div class="parent-p">
+								<p><em>유형</em>반응형 웹</p>
+								<p><em>구현</em>퍼블리싱 100%</p>
+								<p><em>작업 기간</em>2020. 2~</p>
+							</div>
+							<div class="more-btn">
+								<div class="btn-gradient">
+									<button type="button"> more detail
+										<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+									</button>
+								</div>
 							</div>
 						</div>
 					</li>
@@ -239,24 +268,41 @@
 			</div>
 		</section>
 
-		<section id="contact" class="section sec4" data-anchor="page4">
+		<section id="contact" class="section sec4 " data-anchor="page4">
 			<div class="container">
 				<h3 class="title_text">CONTACT</h3>
-				<div class="contact_area">
-					<ul>
-						<li>+82 010-7467-9987</li>
-						<li>waterrutg@naver.com</li>
-					</ul>
-					<ul>
-						<li>
-							<a href="https://github.com/sj2sj" target="_blank">
-								<img src="assets/img/icons/ico_git.png" target="_blank" alt="github">
-							</a>
-						</li>
-						<li> </li>
-					</ul>
-					<p class="copyright">© Copyright 2020. Lee Sujin</p>
-				</div>
+					<div class="review_area">
+						<h4>REVIEW</h4>
+						<p>HTML 마크업 부터 CSS3의 동적 스타일, 그리고 이벤트 처리를 위한 JS까지...
+							독학으로 공부하며 힘든 점이 많았지만, 그 점들을 하나하나 해결해나가며 
+							생기는 뿌듯함과 성취감 덕분에 더욱 애착이 가는 포트폴리오가 완성되었다고 생각합니다.
+							아직 부족함이 많지만, 이제는 팀원들과 함께 문제를 해결해 나가며 발전하는 퍼블리셔가 되고 싶습니다.
+						</p>
+					</div>
+					<div class="contact_area">
+						<h4>CONTACT</h4>
+						<ul>
+							<li>
+								<a href="tel:010-7467-9987">
+									<img src="assets/img/icons/ico_phone.png" alt="휴대폰, 전화">
+									<span>+82 010-7467-9987</span>
+								</a>
+							</li>
+							<li>
+								<a href="mailto:waterttug@naver.com">
+									<img src="assets/img/icons/ico_email.png" alt="이메일">
+									<span>waterrutg@naver.com</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://github.com/sj2sj" target="_blank">
+									<img src="assets/img/icons/ico_git.png" target="_blank" alt="github">
+									<span>github</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				<p class="copyright">© Copyright 2020. Lee Sujin</p>
 			</div>
 		</section>
 
@@ -282,7 +328,8 @@
 				autoScrolling: true, 
 				scrollHorizontally: true,
 				paddingTop: '40px',
-				responsiveWidth: 1023,
+				responsiveWidth: 1025,
+				responsiveHeight: 900,
 				onLeave : function(anchorLink, index) {
 					if(index == 1) {
 						$('.nav ul li').removeClass('active');

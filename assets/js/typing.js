@@ -5,7 +5,7 @@ var remove = -1;
 
 random();
 
-var tyInt = setInterval(typing, 400); // 반복동작 
+var tyInt = setInterval(typing, 300); // 반복동작 
 
 /* typing
 	typing-text를 verb-text에 한 글자씩 입력하는 함수

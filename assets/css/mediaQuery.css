@@ -13,24 +13,120 @@
     .container {max-width: 1200px;}
 	
 	.container {padding: 0 50px;}
+	#header .container {padding: 0 50px;}
 
 	#fullpage .sec1 .container .title h3 {font-size: 37px;}
 	#fullpage .sec1 .container .title h3 .eng {font-size: 30px;}
 }
 
-/* 0~1023 PC 끝 */
-@media (max-width: 1023px) {
+/* 0~1024 PC 끝 */
+@media (max-width: 1024px) {
 	.container {padding: 0 30px;}
+	#header .container {padding: 0 30px;}
 
 	#fullpage .sec1 .container .title h3 {font-size: 35px;}
 	#fullpage .sec1 .container .title h3 .eng {display: none;}
 	
 	.title_text {font-size: 60px;}
 
-
-	#fullpage .sec2 .container .right_area > div {padding: 10px 10px 10px 70px;}
-	#fullpage .sec2 .container .right_area .skill_wrap {height: auto; margin-bottom: 1%;}
-	#fullpage .sec2 .container .right_area .work_wrap {height: auto; width: 100%; margin-bottom: 1%;}
+	#fullpage .sec2 .container .right_area .work_wrap {height: auto; width: 100%; margin-bottom: 20px;}
 	#fullpage .sec2 .container .right_area .certificate_wrap {height: auto; width: 100%;}
 
+	#modal .modal_content {width: 90%; height: 90%; padding: 20px 30px;}
+	#modal .modal_content .slide_img {overflow: hidden; width: 100%; height: 50%; float: none;}
+	#modal .modal_content .slide_img img {margin-top: 20px;}
+	#modal .modal_content .modal_info {width: 100%; float: none; padding: 30px 20px 0 20px;}
+	#modal .modal_content .modal_info strong {margin-bottom: 0; font-size: 30px;}
+	#modal .modal_content .slide_img:hover img {margin-top: -150%;}
+}
+
+/* 0~840px */
+@media (max-width: 840px) {
+	.container {padding: 0 20px;}
+
+
+	#fullpage .sec2 .container .left_area {display: none;}
+	#fullpage .sec2 .container .right_area {width: 100%;}
+	#fullpage .sec2 .container .right_area > div {padding: 20px 10px 20px 50px;}
+
+	#fullpage .sec4 .container div {padding: 40px;}
+	#fullpage .sec4 .container .review_area p {font-size: 18px;}
+	#fullpage .sec4 .container .contact_area ul li span {font-size: 18px;}
+
+
+
+
+}
+
+/* 0~720px */
+@media (max-width: 720px) {
+
+	.container {padding: 0 10px;}
+	#header .container {padding: 0 10px;}
+
+	.title_text {font-size: 55px;}
+
+	#fullpage .sec1 .container ul.move_word li:nth-child(3) {top: -250px; left: -100px;}
+
+
+	#fullpage .sec2 .container h4 {font-size: 18px;}
+	#fullpage .sec2 .container .words {font-size: 18px;}
+	#fullpage .sec2 .container .right_area .skill_wrap ul li strong {font-size: 19px;}
+	#fullpage .sec2 .container .right_area li {font-size: 16px;}
+
+
+	#fullpage .sec4 .container h4 {font-size: 23px;}
+	#fullpage .sec4 .container div {padding: 30px;}
+	#fullpage .sec4 .container .review_area p {font-size: 17px;}
+	#fullpage .sec4 .container .contact_area ul li img {width: 25px; height: 25px;}
+	#fullpage .sec4 .container .contact_area ul li span {font-size: 17px; padding-left: 5px;}
+}
+
+
+/* 0~600px mobile device 시작 */
+@media (max-width: 600px) {
+	#header .container .nav {padding: 8px;}
+	#header .container .nav ul li a {font-size: 16px; margin: 0 10px;}
+
+	.title_text {font-size: 45px;}
+
+	#fullpage .sec1 .container .title h3 {font-size: 32px;}
+
+	#fullpage .sec2 .container .words {font-size: 16px;}
+	#fullpage .sec2 .container .right_area > div {padding: 20px 10px 20px 35px;}
+	#fullpage .sec2 .container .right_area .parent-ul {margin-left: -15px;}
+	
+	#fullpage .sec3 .container ul li {float: none; width: 100%; height: auto; margin: 20px 0 20px 0;}
+
+	#fullpage .sec3 .container ul li img.tablet {top: 100px;}
+	#fullpage .sec3 .container ul li img.mobile {top: 100px;}
+
+	#fullpage .sec4 .container h4 {padding-bottom: 10px;}
+	#fullpage .sec4 .container div {padding: 10px 0 30px 0;}
+	#fullpage .sec4 .container .review_area {float: none; width: 100%; margin-right: 0;}
+	#fullpage .sec4 .container .contact_area {float: none; width: 100%;}
+	#fullpage .sec4 .container .contact_area ul li {margin-bottom: 10px; }
+	
+}
+
+
+/* 0~480px mobile device 시작 */
+@media (max-width: 480px) {
+	.title_text {font-size: 40px;}
+
+	#fullpage .sec1 .container ul.move_word li:nth-child(1) {top: -165px; left: 0px;}
+	#fullpage .sec1 .container ul.move_word li:nth-child(4) {top: -280px; left: 80px;}
+
+	#fullpage .sec2 .container .words {margin: -30px 0 30px 0}
+	#fullpage .sec2 .container .words .res_br {display: block;}
+}
+
+
+/* 0~400px mobile device 시작 */
+@media (max-width: 400px) {
+
+	.title_text {font-size: 32px;}
+
+	#header .container .nav ul li a {font-size: 15px; margin: 0 5px;}
+	#fullpage .sec1 .container .title h3 {font-size: 29px;}
 }
