@@ -23,9 +23,9 @@
 }
 
 @keyframes arrow {
-	0% {left: -23px;}
-	50% {left: -28px;}
-	100% {left: -23px;}
+	0% {right: 5px;}
+	50% {right: 10px;}
+	100% {right: 5px;}
 }
 
 //fonts
@@ -92,7 +92,11 @@ $high-color: #4A206A;
 	}
 }
 
-.fp-responsive #fullpage .section {padding-bottom: 40px;}
+.fp-responsive #fullpage .sec3 {padding: 80px 0 !important;}
+.fp-responsive #fullpage .sec2 .container .right_area .work_wrap {max-height: 232px;}
+.fp-responsive #fullpage .sec2 .container .right_area .certificate_wrap {min-height: 232px;}
+
+.hidden {height: 100%; min-height: 100%; overflow: hidden !important; touch-action: none;}
 
 .container {
 	@include full-container;
@@ -274,13 +278,14 @@ $high-color: #4A206A;
 									font-size: 18px; color: $high-color; font-weight: 500;
 								}
 								strong {font-weight: 500;}
+								.work_desc {font-size: 16px; color: $title-color;}
 							} 
 						}
 					 }
 				}
 				.certificate_wrap {
+					float: left; 
 					width: 38%; height: 37%;
-					float: left;
 					ul {
 						li {padding-bottom: 3px;}
 					}
@@ -334,7 +339,6 @@ $high-color: #4A206A;
 					&:hover .info {
 						opacity: 1;
 					}
-					&:hover img {opacity: 0.5;}
 					img {
 						position: absolute;
 						&.pc {
@@ -352,7 +356,7 @@ $high-color: #4A206A;
 						opacity: 0;
 						width: 100%; height: 100%;
 						border-radius: 15px;
-						background: rgba(255, 255, 255, 0.5);
+						background: rgba(255, 255, 255, 0.9);
 						text-align: center;
 						transition: all 0.5s ease;
 						strong {
@@ -418,8 +422,20 @@ $high-color: #4A206A;
 
 	// section4 , contact
 	.sec4 {
-		background: url(#{$img-url}/footer_bg.jpg) no-repeat center center;
-		background-size: cover;
+		position: relative;
+		z-index: 1;
+		&:before {
+			position: absolute;
+			top: 0; left: 0;
+			background: url(#{$img-url}/footer_bg.jpg) ;
+			background-size: cover;
+			opacity: 0.7 !important;
+			filter: alpha(opacity=70);
+			z-index: -1;
+			content: '';
+			width: 100%; height: 100%;
+		}
+		
 		.container {
 			overflow: hidden;
 			height: 100%;
@@ -432,11 +448,13 @@ $high-color: #4A206A;
 				position: relative;
 				padding-bottom: 20px; margin-bottom: 30px;
 				font-size: 30px;
+				font-weight: 300;
+				letter-spacing: 0.05em;
 				&:before {
 					position: absolute;
 					content: '';
 					bottom: 0; left: 0;
-					width: 40%; height: 5px;
+					width: 40%; height: 4px;
 					@include bgGradient(#f68084, #4A206A, right);
 				}
 			}
@@ -494,7 +512,7 @@ $high-color: #4A206A;
 	width: 100%; height: 100%;
 	z-index: 20;
 
-	.modal_content {
+	.modal_wrap {
 		position: relative;
 		top: 50%; left: 50%;
 		transform: translate(-50%, -50%);
@@ -541,76 +559,93 @@ $high-color: #4A206A;
 			}
 		}
 
-		.slide_img {
-			width: 60%;
-			float: left;
-			img {
-				width: 100%;
-				margin-top: 40px;
-				transition: margin-top 1s ease-in-out;
-			}
-			&:hover img {
-				margin-top: -100%;
-				transition: margin-top 4s ease-in-out;
-			}
-		}
-
-		.modal_info {
-			float: left;
-			width: 40%;
-			padding: 50px 20px 0 40px;
-			box-sizing: border-box;
-			font-size: 18px;
-			strong {
-				@include highlight(#d1c4e9);
-				display: inline-block;
-				margin-bottom: 10px;
-				font-size: 40px;
-				font-weight: 600;
-			}
-			p {
-				padding-bottom: 3px;
-				&.refer {
-					margin: 20px 0;
-					font-size: 16px;
-					color: #777;
+		#modal_content {
+			height: 100%;	
+			.slide_img {
+				width: 60%;
+				float: left;
+				img {
+					width: 100%;
+					margin-top: 40px;
+					transition: margin-top 1s ease-in-out;
 				}
-				em {font-weight: 500;}
-				span {color: #555;}
-			}
-		}
-
-		.view-btn {
-			position: absolute;
-			right: 20px; bottom: 25px;
-			display: inline-block;
-			a {
-				position: relative;
-				display: block;
-				margin: 0 25px;
-				span {}
-				.fa-long-arrow-right {
-					position: absolute;
-					top: 50%; left: -23px;
-					transform: translateY(-50%);
-					background: #4A206A; 
-					background: -webkit-linear-gradient(to right, #4A206A 0%, #f68084 100%);
-					background: -o-linear-gradient(to right, #4A206A 0%, #f68084 100%);
-					background: -ms-linear-gradient(to right, #4A206A 0%, #f68084 100%);
-					background: linear-gradient(to right, #4A206A 0%, #f68084 100%);
-					-webkit-text-fill-color: transparent;
-					-webkit-background-clip: text;
+				&:hover img {
+					margin-top: -100%;
+					transition: margin-top 4s ease-in-out;
 				}
-				&:hover {
-					.fa-long-arrow-right {
-						left: -30px;
-						animation: arrow;
-						animation-duration: 1.3s;
-						animation-iteration-count: infinite;
+			}
+
+			.modal_info {
+				float: left;
+				width: 40%; height: 100%;
+				overflow-y: auto;
+				padding: 50px 20px 0 40px;
+				box-sizing: border-box;
+				font-size: 18px;
+				.page_area {
+					a {
+						position: relative;
+						display: inline-block;
+						box-sizing: border-box;
+						width: 45%;
+						border: 1px solid $high-color;
+						padding: 5px 10px;
+						margin: 5px 0 0 0;
+						.fa-long-arrow-right {
+							position: absolute;
+							top: 50%; right: 5px;
+							transform: translateY(-50%);
+							background: #4A206A; 
+							background: -webkit-linear-gradient(to right, #4A206A 0%, #f68084 100%);
+							background: -o-linear-gradient(to right, #4A206A 0%, #f68084 100%);
+							background: -ms-linear-gradient(to right, #4A206A 0%, #f68084 100%);
+							background: linear-gradient(to right, #4A206A 0%, #f68084 100%);
+							-webkit-text-fill-color: transparent;
+							-webkit-background-clip: text;
+						}
+						&:hover {
+							.fa-long-arrow-right {
+								right: 10px;
+								animation: arrow;
+								animation-duration: 1.3s;
+								animation-iteration-count: infinite;
+							}
+						}
 					}
 				}
+				strong {
+					@include highlight(#d1c4e9);
+					display: inline-block;
+					margin-bottom: 10px;
+					font-size: 38px;
+					font-weight: 600;
+				}
+				p {
+					margin-top: 3px;
+					&.refer {
+						margin: 20px 0;
+						font-size: 16px;
+						color: #777;
+					}
+					em {font-weight: 500;}
+					span {color: #555;}
+				}
+				hr {margin: 20px 0;}
 			}
-			
+
+
+			.view-btn {
+				position: absolute;
+				right: 20px; bottom: 25px;
+				display: inline-block;
+				a {
+					position: relative;
+					display: block;
+					margin: 0 25px;
+					span {}
+					
+				}
+			}
 		}
 	}
 
