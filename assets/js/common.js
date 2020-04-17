@@ -41,7 +41,7 @@ var data = {
 			, "workPrd" : "2020. 03 ~ 2020. 04"
 			, "totalPage" : "1"
 			, "useApi" : "fullpage.js, jsrender, scss"
-			, "githubPage" : "https://github.com/sj2sj/customs/"
+			, "githubPage" : "https://github.com/sj2sj/sujin/"
 			, "mainPage" : "http://sj2sj.dothome.co.kr/sujin/index.html"
 			, "opinion" : "'나' 를 소개해야하는 페이지인 만큼, 깔끔하고 직관적으로 보일 수 있도록 했습니다. 언제든 원하는 섹션으로 넘어갈 수 있도록 메뉴를 구성했습니다. 첫 섹션에서는 저의 성격들을 나열해놓고, 타이핑 되는 듯한 효과를 통해 페이지를 동적으로 보이도록 했습니다. 모달 창에서는 jsrender를 사용해 데이터 바인딩 하였습니다. <br>또한 포트폴리오 사이트를 만들며 scss를 처음 사용해보았는데, CSS보다 간략한 표기법으로 CSS를 구조화하여 사용할 수 있는 것이 매력적이었습니다."
 		}
@@ -76,7 +76,7 @@ var data = {
 			, "githubPage" : "https://github.com/sj2sj/coffeebean/"
 			, "mainPage" : "http://sj2sj.dothome.co.kr/coffeebean/"
 			, "subPage1" : "http://sj2sj.dothome.co.kr/coffeebean/html/login.html"
-			, "opinion" : ""
+			, "opinion" : "좋아하는 브랜드 사이트를 클론코딩 해보며 퍼블리싱에 더 흥미를 가지게 되었습니다. 배너에 사용 된 swiper.js의 앞으로, 뒤로 아이콘을 커스텀하여 사용하였습니다."
 		}
 	]
 	, "megabox": [
@@ -91,10 +91,10 @@ var data = {
 			, "useApi" : "swiper.js"
 			, "githubPage" : "https://github.com/sj2sj/megabox/"
 			, "mainPage" : "http://sj2sj.dothome.co.kr/megabox/index21.html"
-			, "opinion" : ""
+			, "opinion" : "클론 코딩 강의를 통해 처음으로 만들어 본 사이트 입니다. html, css, js 기초 강의들을 통해 배운 기초들을 실제로 홈페이지를 만들 때 어떻게 사용하는지 알게 되었습니다."
 		}
 	]
 }
 
-console.log(JSON.stringify(data['customs']));
+// console.log(JSON.stringify(data['customs']));
 

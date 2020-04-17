@@ -97,8 +97,7 @@
 #fullpage .sec3 .container ul li .more-btn:hover .btn-gradient { background: linear-gradient(to right, #4A206A 0%, #f68084 100%); width: 100%; height: 100%; animation: gradient 0.7s ease; }
 #fullpage .sec3 .container ul li .more-btn:hover .btn-gradient button { color: #F6F6F6; }
 #fullpage .sec3 .container ul li .more-btn button { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block; padding: 8px 0px; text-align: center; letter-spacing: 0.04em; box-sizing: border-box; font-weight: 300; background: transparent; }
-#fullpage .sec4 { position: relative; z-index: 1; }
-#fullpage .sec4:before { position: absolute; top: 0; left: 0; background: url(../../img/footer_bg.jpg); background-size: cover; opacity: 0.7 !important; filter: alpha(opacity=70); z-index: -1; content: ''; width: 100%; height: 100%; }
+#fullpage .sec4 { position: relative; z-index: 1; background: url(../../img/footer_bg_ie.png) no-repeat; background-size: cover; }
 #fullpage .sec4 .container { overflow: hidden; height: 100%; }
 #fullpage .sec4 .container h3 { margin: 20px 0; text-align: center; font-weight: 300; }
 #fullpage .sec4 .container h4 { position: relative; padding-bottom: 20px; margin-bottom: 30px; font-size: 30px; font-weight: 300; letter-spacing: 0.05em; }
@@ -125,7 +124,7 @@
 #modal .modal_wrap #modal_content .slide_img:hover img { margin-top: -100%; transition: margin-top 4s ease-in-out; }
 #modal .modal_wrap #modal_content .modal_info { float: left; width: 40%; height: 100%; overflow-y: auto; padding: 50px 20px 0 40px; box-sizing: border-box; font-size: 18px; }
 #modal .modal_wrap #modal_content .modal_info .page_area a { position: relative; display: inline-block; box-sizing: border-box; width: 45%; border: 1px solid #4A206A; padding: 5px 10px; margin: 5px 0 0 0; }
-#modal .modal_wrap #modal_content .modal_info .page_area a .fa-long-arrow-right { position: absolute; top: 50%; right: 5px; transform: translateY(-50%); background: #4A206A; background: -webkit-linear-gradient(to right, #4A206A 0%, #f68084 100%); background: -o-linear-gradient(to right, #4A206A 0%, #f68084 100%); background: -ms-linear-gradient(to right, #4A206A 0%, #f68084 100%); background: linear-gradient(to right, #4A206A 0%, #f68084 100%); -webkit-text-fill-color: transparent; -webkit-background-clip: text; }
+#modal .modal_wrap #modal_content .modal_info .page_area a .fa-long-arrow-right { position: absolute; top: 50%; right: 5px; transform: translateY(-50%); background: #fff; background: -webkit-linear-gradient(to right, #4A206A 0%, #f68084 100%); background: -o-linear-gradient(to right, #4A206A 0%, #f68084 100%); background: -ms-linear-gradient(to right, #4A206A 0%, #f68084 100%); background: linear-gradient(to right, #4A206A 0%, #f68084 100%); -webkit-text-fill-color: transparent; -webkit-background-clip: text; }
 #modal .modal_wrap #modal_content .modal_info .page_area a:hover .fa-long-arrow-right { right: 10px; animation: arrow; animation-duration: 1.3s; animation-iteration-count: infinite; }
 #modal .modal_wrap #modal_content .modal_info strong { display: inline-block; margin-bottom: 10px; font-size: 38px; font-weight: 600; }
 #modal .modal_wrap #modal_content .modal_info strong.highlight { position: relative; }
